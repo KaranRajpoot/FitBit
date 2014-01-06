@@ -8,8 +8,8 @@
 
 //#error Replace these with your own app credentials, then remove this error.
 
-#define OAUTH_CONSUMER_KEY @"set fitbit oauth consumer key"
-#define OAUTH_CONSUMER_SECRET @"set fitbit oauth consumer secret"
+#define OAUTH_CONSUMER_KEY @""//set fitbit oauth consumer key
+#define OAUTH_CONSUMER_SECRET @""//set fitbit oauth consumer secret
 #define getProfileInfo @"http://api.fitbit.com/1/user/-/profile.json"
 #define getActivity @"http://api.fitbit.com/1/user/-/activities/date/2013-12-27.json"
 #define getFood @"http://api.fitbit.com/1/user/-/activities/date/2013-12-27.json"
