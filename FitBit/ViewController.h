@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "OAuthFitBit.h"
+#import "OAuthFitBitCallbacks.h"
+#import "FitBitLoginUiFeedback.h"
 @interface ViewController : UIViewController
-
+{
+    OAuthFitBit *oAuthFitBit;
+    IBOutlet UIButton *profileBtn,*activityBtn,*foodBtn;
+}
+@property(nonatomic,retain)OAuthFitBit *oAuthFitBit;
+- (void)handleOAuthVerifier:(NSString *)oauth_verifier;
+-(IBAction)getProfileDetail:(id)sender;
+-(IBAction)getActivityDetail:(id)sender;
+-(IBAction)getFoodDetail:(id)sender;
 @end

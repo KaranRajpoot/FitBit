@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ViewController.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property(nonatomic,retain)ViewController *controller;
++(void)startProgressBar:(NSString *)strMessgae controller:(id)controller;
++(void)StopProgressBar:(UIView *)view;
++(void)changeActivityViewFrame:(id)controller;
 @end
