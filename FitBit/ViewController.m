@@ -36,7 +36,13 @@
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     
 	queue = [[NSOperationQueue alloc] init];
-    
+	
+     if ([OAUTH_CONSUMER_KEY isEqualToString:@""] || [OAUTH_CONSUMER_SECRET isEqualToString:@""]) {
+        UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"FitBit Error" message:@"first set the fitbit consumer key and consumer secret" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+        return;
+      
+    }
     _oAuthFitBit = [[OAuthFitBit alloc] initWithConsumerKey:OAUTH_CONSUMER_KEY andConsumerSecret:OAUTH_CONSUMER_SECRET];
     _oAuthFitBit.delegate=self;
 
