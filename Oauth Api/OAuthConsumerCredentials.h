@@ -13,3 +13,6 @@
 #define getProfileInfo @"http://api.fitbit.com/1/user/-/profile.json"
 #define getActivity @"http://api.fitbit.com/1/user/-/activities/date/2013-12-27.json"
 #define getFood @"http://api.fitbit.com/1/user/-/activities/date/2013-12-27.json"
+#define AUTH_BASE_URL @"https://www.fitbit.com/"
+#define REQUEST_TOKEN_URL    @"oauth/request_token"
+#define ACCESS_TOKEN_URL     @"oauth/access_token"
