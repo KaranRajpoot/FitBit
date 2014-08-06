@@ -49,8 +49,9 @@
  * This is the request/response specified in OAuth Core 1.0A section 6.1.
  */
 - (void) synchronousRequestFitBitTokenWithCallbackUrl:(NSString *)callbackUrl {
-   	NSString *url = @"https://api.fitbit.com/oauth/request_token";
+   //	NSString *url = @"https://api.fitbit.com/oauth/request_token";
 	
+NSString *url =	[AUTH_BASE_URL stringByAppendingString:REQUEST_TOKEN_URL]
 	// Invalidate the previous request token, whether it was authorized or not.
 	self.oauth_token_authorized = NO; // We are invalidating whatever token we had before.
 	self.oauth_token = @"";
@@ -106,8 +107,8 @@
  */
 - (void) synchronousAuthorizeFitBitTokenWithVerifier:(NSString *)oauth_verifier {
 	
-	//NSString *url = @"https://api.twitter.com/oauth/access_token";
-    NSString *url = @"https://api.fitbit.com/oauth/access_token";
+
+    NSString *url =[AUTH_BASE_URL stringByAppendingString:ACCESS_TOKEN_URL] //@"https://api.fitbit.com/oauth/access_token";
 
 	
 	// We manually specify the token as a param, because it has not yet been authorized
